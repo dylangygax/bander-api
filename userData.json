@@ -1,0 +1,14 @@
+{
+     "users": [
+          {
+               "username": "Questlove",
+               "isBand": false,
+               "email": "Questlove@yahoo.com",
+               "musicUrl": "https://en.wikipedia.org/wiki/Questlove",
+               "bio": "Questlove is in the house",
+               "genre": "Hip Hop",
+               "location": "the house",
+               "instrument": "Drums"
+          }
+     ]
+}

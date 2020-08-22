@@ -6,7 +6,7 @@ const ctrl = require('../controllers')
 // index filter show create update destroy
 router.get('/', ctrl.users.index)
 // router.get('/filter/:id', ctrl.users.filter)
-// router.get('/:id', ctrl.users.show)
+router.get('/:id', ctrl.users.show)
 // router.post('/', ctrl.users.create)
 // router.put('/:id', ctrl.users.update)
 // router.delete('/:id', ctrl.users.destroy)
