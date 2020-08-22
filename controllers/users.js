@@ -19,9 +19,36 @@ const show = (req,res) => {
      })
 }
 
+const create = (req, res) => {
+     db.User.create(req.body, (err,createdUser) => {
+          if (err) console.log(`error in users#create: ${err}`)
+          res.status(200).json({user: createdUser})
+     })
+}
+
+const update = (req, res) => {
+     db.User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedUser) => {
+          if (err) console.log(`error in users#update: ${err}`)
+          res.status(200).json({
+               user: updatedUser,
+               //message: `${updatedUser.username} updated succesfully`
+          })
+     })
+}
+
+const destroy = (req, res) => {
+     db.User.findByIdAndDelete(req.params.id, (err, deletedUser) => {
+          if (err) console.log(`error in users#destroy: ${err}`)
+          res.send(`user deleted successfully`)
+     })
+}
+
 //export
 // index filter show create update destroy
 module.exports = {
      index,
-     show
+     show,
+     create,
+     update,
+     destroy
 }
