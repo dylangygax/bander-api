@@ -1,0 +1,44 @@
+{
+     "users": [
+          {
+               "username": "Questlove",
+               "isBand": false,
+               "email": "Questlove@yahoo.com",
+               "musicUrl": "https://www.youtube.com/watch?v=De8sNVhJ5SE",
+               "bio": "Questlove is in the house",
+               "genre": "Hip Hop",
+               "location": "the house",
+               "instrument": "Drums"
+          },
+          {
+               "username": "Fripp and Eno",
+               "isBand": true,
+               "email": "thrak@hotmail.com",
+               "musicUrl": "https://www.youtube.com/watch?v=ZwHH7XECJLg",
+               "bio": "Looking for someone to lay down those fat beats",
+               "genre": "Ambient",
+               "location": "england maybe",
+               "instrument": "Drums"
+          },
+          {
+               "username": "Smash Mouth",
+               "isBand": true,
+               "email": "ShrekLover@yahoo.com",
+               "musicUrl": "https://www.youtube.com/watch?v=L_jWHffIx5E",
+               "bio": "Some... BODY",
+               "genre": "Gospel",
+               "location": "the sun",
+               "instrument": "Bass"
+          },
+          {
+               "username": "Rick Astley",
+               "isBand": false,
+               "email": "slickrick2@hotmail.com",
+               "musicUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+               "bio": "rollin",
+               "genre": "Pop",
+               "location": "internet",
+               "instrument": "Vocals"
+          }
+     ]
+}
