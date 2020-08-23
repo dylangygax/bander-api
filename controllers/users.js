@@ -11,6 +11,14 @@ const index = (req, res) => {
      })
 }
 
+const results = (req, res) => {
+     db.User.find(req.body, (err, foundUsers) => {
+          if (err) console.log(`error in users#filter: ${err}`)
+          //res.send('users filter called')
+          res.status(200).json({users: foundUsers})
+     })
+}
+
 const show = (req,res) => {
      db.User.findById(req.params.id, (err, foundUser) => {
           if (err) console.log(`error in users#show: ${err}`)
@@ -50,5 +58,6 @@ module.exports = {
      show,
      create,
      update,
-     destroy
+     destroy,
+     results
 }
