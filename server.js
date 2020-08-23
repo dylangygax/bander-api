@@ -11,6 +11,7 @@ app.use(cors())
 
 //routes
 app.use('/api/v1/users', routes.users)
+app.use('/api/v1/auth', routes.auth)
 
 //connection
 app.listen(PORT, () => console.log(`listening on port ${PORT}`))
