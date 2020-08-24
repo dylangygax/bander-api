@@ -1,6 +1,6 @@
 const passport = require('passport')
 const LocalStrategy = require('./localStrategy')
-const User = ('../models/user')
+const User = require('../models/user')
 
 //called when user logs in
 passport.serializeUser((user, done) => {

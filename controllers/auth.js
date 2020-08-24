@@ -7,7 +7,12 @@ const login = (req, res) => {
 }
 
 const logout = (req, res) => {
+     if (!req.user) return res.json({
+          message: 'No user to log out'
+     })
 
+     req.logout()
+     res.json({ message: 'logout successful'})
 }
 
 const register = (req, res) => {
@@ -35,13 +40,13 @@ const register = (req, res) => {
      })
 }
 
-const verify = (req, res) => {
+// const verify = (req, res) => {
 
-}
+// }
 
 module.exports = {
      login,
      logout,
      register,
-     verify
+     // verify
 }
