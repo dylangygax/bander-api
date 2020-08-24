@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 
 //login logout register verify
 const login = (req, res) => {
-
+     res.json({ user: req.user.email })
 }
 
 const logout = (req, res) => {

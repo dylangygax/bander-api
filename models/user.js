@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 const bcrypt = require('bcrypt')
 
 const UserSchema = new Schema({
-     username: {type: String, required: true, unique: true},
+     username: {type: String, required: true},
      password: {type: String, required: true},
      isBand: Boolean,
-     email: String,
+     email: {type: String, required: true, unique: true},
      musicUrl: String,
 	bio: String,
 	genre: String,
@@ -21,7 +21,7 @@ UserSchema.methods = {
           const salt = bcrypt.genSaltSync(10)
           return bcrypt.hashSync(plainTextPassword, salt)
      },
-     //check password enetered matches the one in the database
+     //check password entered matches the one in the database
      checkPassword: function (inputPassword) {
           return bcrypt.compareSync(inputPassword, this.password)
      }
