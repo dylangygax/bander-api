@@ -16,6 +16,7 @@ const logout = (req, res) => {
 }
 
 const register = (req, res) => {
+     console.log('in register function')
      //check to see if neccesary info is there
      if (!(req.body.username && req.body.email && req.body.password)) {
           return res.json({
@@ -32,9 +33,12 @@ const register = (req, res) => {
                })
           }
           //if user doesn't already exist
+          console.log('so far so good')
           const newUser = new db.User(req.body)
           newUser.save((err, savedUser) => {
+               console.log('in callback to save user')
                if (err) return res.json(err)
+               console.log(savedUser)
                res.json(savedUser)
           })
      })
