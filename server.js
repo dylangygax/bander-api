@@ -15,11 +15,12 @@ app.use(express.json()) //JSON parsing
 
 //cors
 const corsOptions = {
-     origin: ['http://localhost:4000'],
+     origin: ['http://localhost:3000'],
      credentials: true,
      optionsSuccessStatus: 204
 }
 app.use(cors(corsOptions))
+// app.use(cors())
 
 //sessions
 app.use(session({

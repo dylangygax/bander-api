@@ -11,7 +11,7 @@ const strategy = new LocalStrategy(
                if (err) return done(err)
                if (!foundUser) return done(null, false, {message: 'Invalid credentials'})
                if (!foundUser.checkPassword(password)) return done(null, false, {message: 'Invalid credentials'})
-               //success
+               console.log('success')
                return done(null, foundUser)
           })
      }
