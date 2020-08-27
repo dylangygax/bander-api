@@ -33,22 +33,22 @@ const UserSchema = new Schema({
 // methods
 UserSchema.methods = {
           // //format any spotify link for embed
-          // formatEmbedLink: function () {
-          //      console.log('in format embed link')
-          //      if (this.musicUrl.includes('spotify.com')) {
-          //           const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
-          //           this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
-          //           this.useSpotifyEmbed = true
-          //      }
-          // },
+        //   formatEmbedLink: function () {
+        //        console.log('in format embed link')
+        //        if (this.musicUrl.includes('spotify.com')) {
+        //             const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
+        //             this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
+        //             this.useSpotifyEmbed = true
+        //        }
+        //   },
      //hash text password
      hashPassword: function (plainTextPassword) {
-          console.log('in format embed link')
-          if (this.musicUrl.includes('spotify.com')) {
-               const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
-               this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
-               this.useSpotifyEmbed = true
-          }
+        //   console.log('in format embed link')
+        //   if (this.musicUrl.includes('spotify.com')) {
+        //        const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
+        //        this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
+        //        this.useSpotifyEmbed = true
+        //   }
           const salt = bcrypt.genSaltSync(10)
           return bcrypt.hashSync(plainTextPassword, salt)
      },
