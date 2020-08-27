@@ -6,7 +6,7 @@ const login = (req, res) => {
      console.log('login login login')
      console.log(req.user)
      console.log(req.session)
-    res.json({ user: req.user.email })
+    res.json(req.user)
 }
 
 const logout = (req, res) => {
