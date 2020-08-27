@@ -3,7 +3,10 @@ const bcrypt = require('bcrypt')
 
 //login logout register verify
 const login = (req, res) => {
-     res.json({ user: req.user.email })
+     console.log('login login login')
+     console.log(req.user)
+     console.log(req.session)
+    res.json({ user: req.user.email })
 }
 
 const logout = (req, res) => {
@@ -34,10 +37,16 @@ const register = (req, res) => {
           }
           //if user doesn't already exist
           console.log('so far so good')
+          console.log(req.body)
+          //const newBody = {email: req.body.email, password: req.body.password, username: req.body.username}
           const newUser = new db.User(req.body)
           newUser.save((err, savedUser) => {
                console.log('in callback to save user')
-               if (err) return res.json(err)
+
+               if (err) {
+                console.log(err)   
+                return res.json(err)
+            }
                console.log(savedUser)
                res.json(savedUser)
           })

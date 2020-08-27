@@ -5,7 +5,7 @@ const passport = require('../passport')
 
 
 // router
-//path: apli/v1/auth/
+//path: apli/v1/auth
 router.post('/login', passport.authenticate('local'), ctrl.auth.login)
 router.delete('/logout', ctrl.auth.logout)
 router.post('/register', ctrl.auth.register)
