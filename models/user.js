@@ -9,14 +9,12 @@ const UserSchema = new Schema({
      isBand: {type: Boolean, required: false},
      musicUrl: {type: String, required: false},
      useSpotifyEmbed: {type: Boolean, required: false, default: false},
-	bio: String,
+	bio: {type: String, required: false},
 	genre: {type: String, required: false},
-	location: {
-          lattitude: {type: Number, required: false},
-          longitude: {type: Number, required: false}
-     },
-     instrument: {type: String, required: false},
-     usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
+    lattitude: {type: Number, required: false},
+    longitude: {type: Number, required: false},
+    instrument: {type: String, required: false},
+    usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
      }],
