@@ -6,7 +6,7 @@ const login = (req, res) => {
      console.log('login login login')
      console.log(req.user)
      console.log(req.session)
-    res.json({ user: req.user.email })
+    res.json(req.user)
 }
 
 const logout = (req, res) => {
@@ -15,7 +15,7 @@ const logout = (req, res) => {
      })
 
      req.logout()
-     res.json({ message: 'logout successful'})
+    return res.json({ message: 'logout successful'})
 }
 
 const register = (req, res) => {
