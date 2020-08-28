@@ -17,15 +17,19 @@ const UserSchema = new Schema({
     usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-     }],
-     usersWhoLikeYou: [{type: mongoose.Schema.Types.ObjectId, 
+    }],
+    usersDisliked: [{type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User',
+        required: false
+    }],
+    usersWhoLikeYou: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-     }],
-     matches: [{type: mongoose.Schema.Types.ObjectId, 
+    }],
+    matches: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-     }]
+    }]
 })
 
 // methods
