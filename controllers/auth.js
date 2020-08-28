@@ -15,7 +15,7 @@ const logout = (req, res) => {
      })
 
      req.logout()
-     res.json({ message: 'logout successful'})
+    return res.json({ message: 'logout successful'})
 }
 
 const register = (req, res) => {
