@@ -6,7 +6,7 @@ const login = (req, res) => {
      console.log('login login login')
      console.log(req.user)
      console.log(req.session)
-    res.json(req.user)
+     res.json(req.user)
 }
 
 const logout = (req, res) => {
@@ -15,7 +15,7 @@ const logout = (req, res) => {
      })
 
      req.logout()
-    return res.json({ message: 'logout successful'})
+     return res.json({ message: 'logout successful' })
 }
 
 const register = (req, res) => {
@@ -27,7 +27,7 @@ const register = (req, res) => {
           })
      }
      //check to make sure the user doesn't already exist
-     db.User.findOne({email: req.body.email}, (err, foundUser) => {
+     db.User.findOne({ email: req.body.email }, (err, foundUser) => {
           if (err) return res.json(err)
           //if user already exists
           if (foundUser) {
@@ -44,9 +44,9 @@ const register = (req, res) => {
                console.log('in callback to save user')
 
                if (err) {
-                console.log(err)   
-                return res.json(err)
-            }
+                    console.log(err)
+                    return res.json(err)
+               }
                console.log(savedUser)
                res.json(savedUser)
           })
