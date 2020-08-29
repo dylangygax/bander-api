@@ -10,15 +10,15 @@ const index = (req, res) => {
 }
 
 const results = (req, res) => {
-     let bandQuery = false;
-     if (req.body.isBand == "band") bandQuery = true;
+     let bandQuery = req.body.isBand == "band" ? true : false;
+     //if (req.body.isBand == "band") bandQuery = true;
      let query;
 
      if (req.body.isBand == "") {
           query = {
                $or: [
                     { genres: { $in: req.body.genres } },
-                    { instruments: { $in: req.body.instruments } }
+                    { instruments: { $in: req.body.instruments } },
                ]
           }
      }
@@ -32,12 +32,37 @@ const results = (req, res) => {
           }
      }
 
+     // if (req.body.isBand == "") {
+     //      console.log("undefined has be HIT!!!", req.body.genres);
+     //      query = {
+     //           $or: [
+     //                { genres: "Gospel" },
+     //                { instruments: { $in: req.body.instruments } },
+     //           ]
+     //      }
+     // }
+
+     // else {
+     //      console.log("isBand has be HIT!!!");
+     //      query = {
+     //           $or: [
+     //                { genres: { $in: req.body.genres } },
+     //                { instruments: { $in: req.body.instruments } },
+     //                { isBand: bandQuery }
+     //           ]
+     //      }
+     // }
+
      db.User.find(query, (err, foundUsers) => {
+          console.log(query);
           if (err) console.log(`error in users#filter: ${err}`)
           console.log("request received", req.body.isBand);
           res.status(200).json({ users: foundUsers })
-     });
+     })
+     console.log(res);
+
 }
+
 
 const show = (req, res) => {
      db.User.findById(req.params.id, (err, foundUser) => {
