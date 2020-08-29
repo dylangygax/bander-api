@@ -9,27 +9,25 @@ const UserSchema = new Schema({
      isBand: {type: Boolean, required: false},
      musicUrl: {type: String, required: false},
      useSpotifyEmbed: {type: Boolean, required: false, default: false},
-	bio: {type: String, required: false},
-	genre: {type: String, required: false},
-    lattitude: {type: Number, required: false},
-    longitude: {type: Number, required: false},
-    instrument: {type: String, required: false},
-    usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
+	bio: String,
+	genres: [{type: String, required: false}],
+	location: {
+          lattitude: {type: Number, required: false},
+          longitude: {type: Number, required: false}
+     },
+     instruments: [{type: String, required: false}],
+     usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-    }],
-    usersDisliked: [{type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User',
-        required: false
-    }],
-    usersWhoLikeYou: [{type: mongoose.Schema.Types.ObjectId, 
+     }],
+     usersWhoLikeYou: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-    }],
-    matches: [{type: mongoose.Schema.Types.ObjectId, 
+     }],
+     matches: [{type: mongoose.Schema.Types.ObjectId, 
           ref: 'User',
           required: false
-    }]
+     }]
 })
 
 // methods

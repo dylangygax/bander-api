@@ -12,11 +12,17 @@ const index = (req, res) => {
 }
 
 const results = (req, res) => {
-     db.User.find(req.body, (err, foundUsers) => {
+     db.User.find(
+          { 
+               $or: [
+                    {genres: { $in: req.body.genres }},
+                    {instruments: { $in: req.body.instruments }}
+               ]
+          } , (err, foundUsers) => {
           if (err) console.log(`error in users#filter: ${err}`)
-          //res.send('users filter called')
+          console.log("request received", req.body.instruments);
           res.status(200).json({users: foundUsers})
-     })
+     });
 }
 
 const show = (req,res) => {
