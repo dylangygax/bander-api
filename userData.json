@@ -4,40 +4,56 @@
                "username": "Questlove",
                "isBand": false,
                "email": "Questlove@yahoo.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=De8sNVhJ5SE",
                "bio": "Questlove is in the house",
-               "genre": "Hip Hop",
-               "location": "the house",
+               "genres": ["Gospel"],
+               "location": {
+                    "lattitude": 40,
+                    "longitude": 35
+                },
                "instrument": "Drums"
           },
           {
                "username": "Fripp and Eno",
                "isBand": true,
                "email": "thrak@hotmail.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=ZwHH7XECJLg",
                "bio": "Looking for someone to lay down those fat beats",
-               "genre": "Ambient",
-               "location": "england maybe",
+               "genres": ["lofi", "noise"],
+               "location": {
+                    "lattitude": 60,
+                    "longitude": 10
+                },
                "instrument": "Drums"
           },
           {
                "username": "Smash Mouth",
                "isBand": true,
                "email": "ShrekLover@yahoo.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=L_jWHffIx5E",
                "bio": "Some... BODY",
-               "genre": "Gospel",
-               "location": "the sun",
+               "genres": ["Gospel", "lofi"],
+               "location": {
+                    "lattitude": -40,
+                    "longitude": 85
+                },
                "instrument": "Bass"
           },
           {
                "username": "Rick Astley",
                "isBand": false,
                "email": "slickrick2@hotmail.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                "bio": "rollin",
-               "genre": "Pop",
-               "location": "internet",
+               "genres": ["Gospel"],
+               "location": {
+                    "lattitude": 44,
+                    "longitude": 35
+                },
                "instrument": "Vocals"
           }
      ]
