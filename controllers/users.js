@@ -20,7 +20,7 @@ const results = (req, res) => {
                ]
           } , (err, foundUsers) => {
           if (err) console.log(`error in users#filter: ${err}`)
-          console.log("request received", req.body.instruments);
+          console.log("request received", req.body);
           res.status(200).json({users: foundUsers})
      });
 }
