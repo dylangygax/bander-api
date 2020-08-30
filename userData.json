@@ -4,44 +4,78 @@
                "username": "Questlove",
                "isBand": false,
                "email": "Questlove@yahoo.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=De8sNVhJ5SE",
                "bio": "Questlove is in the house",
-               "genre": "Hip Hop",
-               "location": "the house",
+               "genres": ["Gospel"],
+               "location": {
+                    "lattitude": 40,
+                    "longitude": 35
+                },
                "instrument": "Drums"
           },
           {
                "username": "Fripp and Eno",
                "isBand": true,
                "email": "thrak@hotmail.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=ZwHH7XECJLg",
                "bio": "Looking for someone to lay down those fat beats",
+<<<<<<< HEAD
                "genre": "Ambient",
                "location": "england maybe",
                "instrument": "Drums",
                "password": "shrekislove"
+=======
+               "genres": ["lofi", "noise"],
+               "location": {
+                    "lattitude": 60,
+                    "longitude": 10
+                },
+               "instrument": "Drums"
+>>>>>>> 756df44479b8d81f75aa28d9b1c92d55cc77362c
           },
           {
                "username": "Smash Mouth",
                "isBand": true,
                "email": "ShrekLover@yahoo.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=L_jWHffIx5E",
                "bio": "Some... BODY",
+<<<<<<< HEAD
                "genres": "Gospel",
                "location": "the sun",
                "instrument": "Bass",
                "password": "shrekislove"
+=======
+               "genres": ["Gospel", "lofi"],
+               "location": {
+                    "lattitude": -40,
+                    "longitude": 85
+                },
+               "instrument": "Bass"
+>>>>>>> 756df44479b8d81f75aa28d9b1c92d55cc77362c
           },
           {
                "username": "Rick Astley",
                "isBand": false,
                "email": "slickrick2@hotmail.com",
+               "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                "bio": "rollin",
+<<<<<<< HEAD
                "genre": "Pop",
                "location": "internet",
                "instrument": "Vocals",
                "password": "shrekislove"
+=======
+               "genres": ["Gospel"],
+               "location": {
+                    "lattitude": 44,
+                    "longitude": 35
+                },
+               "instrument": "Vocals"
+>>>>>>> 756df44479b8d81f75aa28d9b1c92d55cc77362c
           }
      ]
 }
