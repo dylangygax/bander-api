@@ -18,7 +18,8 @@
                "bio": "Looking for someone to lay down those fat beats",
                "genre": "Ambient",
                "location": "england maybe",
-               "instrument": "Drums"
+               "instrument": "Drums",
+               "password": "shrekislove"
           },
           {
                "username": "Smash Mouth",
@@ -26,9 +27,10 @@
                "email": "ShrekLover@yahoo.com",
                "musicUrl": "https://www.youtube.com/watch?v=L_jWHffIx5E",
                "bio": "Some... BODY",
-               "genre": "Gospel",
+               "genres": "Gospel",
                "location": "the sun",
-               "instrument": "Bass"
+               "instrument": "Bass",
+               "password": "shrekislove"
           },
           {
                "username": "Rick Astley",
@@ -38,7 +40,8 @@
                "bio": "rollin",
                "genre": "Pop",
                "location": "internet",
-               "instrument": "Vocals"
+               "instrument": "Vocals",
+               "password": "shrekislove"
           }
      ]
 }

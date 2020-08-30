@@ -11,13 +11,12 @@ const index = (req, res) => {
 
 const results = (req, res) => {
      let bandQuery = req.body.isBand == "band" ? true : false;
-     //if (req.body.isBand == "band") bandQuery = true;
      let query;
 
      if (req.body.isBand == "") {
           query = {
                $or: [
-                    { genres: { $in: req.body.genres } },
+                    { genre: { $in: req.body.genres } },
                     { instruments: { $in: req.body.instruments } },
                ]
           }
@@ -25,33 +24,12 @@ const results = (req, res) => {
      else {
           query = {
                $or: [
-                    { genres: { $in: req.body.genres } },
+                    { genre: { $in: req.body.genres } },
                     { instruments: { $in: req.body.instruments } },
                     { isBand: bandQuery }
                ]
           }
      }
-
-     // if (req.body.isBand == "") {
-     //      console.log("undefined has be HIT!!!", req.body.genres);
-     //      query = {
-     //           $or: [
-     //                { genres: "Gospel" },
-     //                { instruments: { $in: req.body.instruments } },
-     //           ]
-     //      }
-     // }
-
-     // else {
-     //      console.log("isBand has be HIT!!!");
-     //      query = {
-     //           $or: [
-     //                { genres: { $in: req.body.genres } },
-     //                { instruments: { $in: req.body.instruments } },
-     //                { isBand: bandQuery }
-     //           ]
-     //      }
-     // }
 
      db.User.find(query, (err, foundUsers) => {
           console.log(query);
