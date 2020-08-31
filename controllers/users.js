@@ -64,6 +64,7 @@ const create = (req, res) => {
 
 const update = (req, res) => {
      db.User.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedUser) => {
+          console.log("userId: " + req.params.id);
           if (err) console.log(`error in users#update: ${err}`)
           res.status(200).json({
                user: updatedUser,

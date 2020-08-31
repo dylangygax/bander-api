@@ -3,28 +3,32 @@ const Schema = mongoose.Schema
 const bcrypt = require('bcrypt')
 
 const UserSchema = new Schema({
-     email: {type: String, required: true, unique: true},
-     username: {type: String, required: true},
-     password: {type: String, required: true},
-     isBand: {type: Boolean, required: false},
-     musicUrl: {type: String, required: false},
-     useSpotifyEmbed: {type: Boolean, required: false, default: false},
-	bio: String,
-	genres: [{type: String, required: false}],
-	location: {
-          lattitude: {type: Number, required: false},
-          longitude: {type: Number, required: false}
+     email: { type: String, required: true, unique: true },
+     username: { type: String, required: true },
+     password: { type: String, required: true },
+     isBand: { type: Boolean, required: false },
+     musicUrl: { type: String, required: false },
+     useSpotifyEmbed: { type: Boolean, required: false, default: false },
+     bio: String,
+     contact: String,
+     genres: [{ type: String, required: false }],
+     location: {
+          lattitude: { type: Number, required: false },
+          longitude: { type: Number, required: false }
      },
-     instruments: [{type: String, required: false}],
-     usersLiked: [{type: mongoose.Schema.Types.ObjectId, 
+     instruments: [{ type: String, required: false }],
+     usersLiked: [{
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'User',
           required: false
      }],
-     usersWhoLikeYou: [{type: mongoose.Schema.Types.ObjectId, 
+     usersWhoLikeYou: [{
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'User',
           required: false
      }],
-     matches: [{type: mongoose.Schema.Types.ObjectId, 
+     matches: [{
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'User',
           required: false
      }]
@@ -32,23 +36,23 @@ const UserSchema = new Schema({
 
 // methods
 UserSchema.methods = {
-          // //format any spotify link for embed
-        //   formatEmbedLink: function () {
-        //        console.log('in format embed link')
-        //        if (this.musicUrl.includes('spotify.com')) {
-        //             const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
-        //             this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
-        //             this.useSpotifyEmbed = true
-        //        }
-        //   },
+     // //format any spotify link for embed
+     //   formatEmbedLink: function () {
+     //        console.log('in format embed link')
+     //        if (this.musicUrl.includes('spotify.com')) {
+     //             const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
+     //             this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
+     //             this.useSpotifyEmbed = true
+     //        }
+     //   },
      //hash text password
      hashPassword: function (plainTextPassword) {
-        //   console.log('in format embed link')
-        //   if (this.musicUrl.includes('spotify.com')) {
-        //        const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
-        //        this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
-        //        this.useSpotifyEmbed = true
-        //   }
+          //   console.log('in format embed link')
+          //   if (this.musicUrl.includes('spotify.com')) {
+          //        const insertionPosition = this.musicUrl.indexOf('spotify.com') + 11
+          //        this.musicUrl = this.musicUrl.slice(0, insertionPosition) + '/embed' + this.musicUrl.slice(insertionPosition)
+          //        this.useSpotifyEmbed = true
+          //   }
           const salt = bcrypt.genSaltSync(10)
           return bcrypt.hashSync(plainTextPassword, salt)
      },
@@ -58,11 +62,11 @@ UserSchema.methods = {
      }
 }
 
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', function (next) {
      //make any spotify links embeddable
      //formatEmbedLink()
      //hash password
-     if (!this.password){
+     if (!this.password) {
           next()
      } else {
           this.password = this.hashPassword(this.password)
