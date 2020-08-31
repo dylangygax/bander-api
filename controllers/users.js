@@ -34,17 +34,9 @@ const results = (req, res) => {
      db.User.find(query, (err, foundUsers) => {
           console.log(query);
           if (err) console.log(`error in users#filter: ${err}`)
-<<<<<<< HEAD
-          console.log("request received", req.body.isBand);
-          res.status(200).json({ users: foundUsers })
-     })
-     console.log(res);
-
-=======
           console.log("request received", req.body);
-          res.status(200).json({users: foundUsers})
+          res.status(200).json({ users: foundUsers })
      });
->>>>>>> 756df44479b8d81f75aa28d9b1c92d55cc77362c
 }
 
 
