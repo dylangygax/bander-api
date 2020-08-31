@@ -7,11 +7,14 @@
                "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=De8sNVhJ5SE",
                "bio": "Questlove is in the house",
-               "genres": ["Gospel"],
+               "contact": "carrier pigeon",
+               "genres": [
+                    "Gospel"
+               ],
                "location": {
                     "lattitude": 40,
                     "longitude": 35
-                },
+               },
                "instrument": "Drums"
           },
           {
@@ -21,11 +24,15 @@
                "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=ZwHH7XECJLg",
                "bio": "Looking for someone to lay down those fat beats",
-               "genres": ["lofi", "noise"],
+               "contact": "carrier pigeon",
+               "genres": [
+                    "lofi",
+                    "noise"
+               ],
                "location": {
                     "lattitude": 60,
                     "longitude": 10
-                },
+               },
                "instrument": "Drums"
           },
           {
@@ -35,11 +42,15 @@
                "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=L_jWHffIx5E",
                "bio": "Some... BODY",
-               "genres": ["Gospel", "lofi"],
+               "contact": "carrier pigeon",
+               "genres": [
+                    "Gospel",
+                    "lofi"
+               ],
                "location": {
                     "lattitude": -40,
                     "longitude": 85
-                },
+               },
                "instrument": "Bass"
           },
           {
@@ -49,11 +60,14 @@
                "password": "testuser",
                "musicUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                "bio": "rollin",
-               "genres": ["Gospel"],
+               "contact": "carrier pigeon",
+               "genres": [
+                    "Gospel"
+               ],
                "location": {
                     "lattitude": 44,
                     "longitude": 35
-                },
+               },
                "instrument": "Vocals"
           }
      ]
